@@ -5,8 +5,47 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PasswordGenerator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="351" Width="400">
     <Grid>
-        
+        <RichTextBox x:Name="richTextBoxOutput" HorizontalAlignment="Left" Height="20" Margin="10,0,95,10" VerticalAlignment="Bottom" IsReadOnly="True">
+            <FlowDocument>
+                <Paragraph>
+                    <Run/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Button x:Name="buttonGenerate" Content="Generate" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="75"/>
+        <GroupBox x:Name="groupBoxLorOne" Header="L or One" Margin="10,10,10,0" VerticalAlignment="Top" Height="60">
+            <Grid Margin="0">
+                <RadioButton x:Name="radioButtonL" Content="Only L" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <RadioButton x:Name="radioButtonOne" Content="Only One" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
+                <RadioButton x:Name="radioButtonBothLorOne" Content="Both" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" IsChecked="True"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="groupBoxOorZero" Header="O or Zero" Margin="10,75,10,0" VerticalAlignment="Top" Height="60">
+            <Grid Margin="0">
+                <RadioButton x:Name="radioButtonO" Content="Only O" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <RadioButton x:Name="radioButtonZero" Content="Only Zero" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
+                <RadioButton x:Name="radioButtonBothOorZero" Content="Both" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" IsChecked="True"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="groupBoxCharacterSet" Header="Character Set" Margin="10,140,10,0" VerticalAlignment="Top" Height="70">
+            <Grid Margin="0">
+                <RadioButton x:Name="radioButtonAlphanumeric" Content="Alphanumeric" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" IsChecked="True"/>
+                <RadioButton x:Name="radioButtonAlpha" Content="Only Letters" HorizontalAlignment="Right" Margin="268,10,10,0" VerticalAlignment="Top"/>
+                <RadioButton x:Name="radioButtonSymbols" Content="A/N plus ! to +" HorizontalAlignment="Left" Margin="10,30,252,0" VerticalAlignment="Top"/>
+                <RadioButton x:Name="radioButtonFullSymbols" Content="A/N plus full unicode" HorizontalAlignment="Right" Margin="219,30,10,0" VerticalAlignment="Top"/>
+
+
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="groupBoxCasing" Header="Casing" Margin="10,215,10,0" VerticalAlignment="Top" Height="60">
+            <Grid Margin="0">
+                <RadioButton x:Name="radioButtonUpper" Content="Upper" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <RadioButton x:Name="radioButtonLower" Content="Lower" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
+                <RadioButton x:Name="radioButtonMixed" Content="Mixed" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" IsChecked="True"/>
+            </Grid>
+        </GroupBox>
+
     </Grid>
 </Window>
